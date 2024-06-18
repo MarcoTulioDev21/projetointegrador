@@ -1,8 +1,0 @@
-{
-  "services": [
-    {
-      "name": "web",
-      "startCommand": "apache2-foreground"
-    }
-  ]
-}
