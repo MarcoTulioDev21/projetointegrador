@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/procedimentos.css" />
+    <title>Procedimentos</title>
+  </head>
+
+  <body>
+    <div class="navbar show-menu">
+      <div class="header-inner-content">
+        <nav>
+          <ul>
+            <li><a href="procedimentos.html">Procedimentos</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="conta.html">Conta</a></li>
+            <li><a href="sobrenos2.html">Sobre nós</a></li>
+            <li><a href="login.html">Sair</a></li>
+          </ul>
+        </nav>
+        <div class="nav-icon-container">
+          <img src="./img/menu.png" class="menu-button" />
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="header-content">
+        <div class="header-bottom-side">
+          <div class="header-bottom-side-left">
+            <h2>Procedimentos Estéticos</h2>
+            <p>
+              Seja bem-vindo ao seu refúgio de beleza e bem-estar! Aqui, no
+              aconchego da nossa clínica, você está prestes a embarcar em uma
+              jornada de transformação e autoestima.
+            </p>
+            <button onclick="scrollToProcedimentos()">Agendamentos</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="search-bar">
+      <input
+        id="searchbar"
+        onkeyup="search_procedimento()"
+        type="text"
+        name="search"
+        placeholder="Pesquisar procedimento.."
+      />
+      <script>
+        document
+          .getElementById("searchbar")
+          .addEventListener("focus", function () {
+            this.setAttribute(
+              "data-placeholder",
+              this.getAttribute("placeholder")
+            );
+            this.setAttribute("placeholder", "");
+          });
+        document
+          .getElementById("searchbar")
+          .addEventListener("blur", function () {
+            this.setAttribute(
+              "placeholder",
+              this.getAttribute("data-placeholder")
+            );
+            this.removeAttribute("data-placeholder");
+          });
+      </script>
+    </div>
+    <main>
+      <div class="procedimentos-container">
+        <div class="procedimentos-card">
+          <img
+            src="./img/procedimento-sobrancelha.png"
+            alt="procedimento-sobrancelha"
+          />
+          <div>
+            <span id="produto-name">Design sobrancelha Comum</span><br />
+            <span id="preco">R$ 25.00</span>
+            <p id="desc-produto">
+              O design comum de sobrancelhas é a técnica de modelagem que
+              envolve a remoção precisa de pelos para aprimorar o formato
+              natural das sobrancelhas, sem o uso de tinturas ou henna. O
+              objetivo é realçar os traços faciais e proporcionar uma aparência
+              equilibrada e harmônica.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20serviço%20de%20'Design%20sobrancelha%20Comum'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/designcomhenna.png" alt="procedimento-sobrancelha" />
+          <div>
+            <span id="produto-name">Design sobrancelha com henna</span><br />
+            <span id="preco">R$ 40.00</span>
+            <p id="desc-produto">
+              As sobrancelhas com henna são uma técnica de tintura
+              semi-permanente usada para realçar e definir as sobrancelhas. A
+              henna, extraída da planta Lawsonia inermis, colore tanto os pelos
+              quanto a pele, criando um efeito de sobrancelhas mais cheias e bem
+              delineadas.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20serviço%20de%20'Design%20sobrancelha%20com%20henna'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/ceraaxila.png" alt="Depilação de axila feminina" />
+          <div>
+            <span id="produto-name">Depilação de axila feminina</span><br />
+            <span id="preco">R$ 20.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na Axila! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20de%20axila%20feminina'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/depilacaobuco.png" alt="Depilação de Buço feminina" />
+          <div>
+            <span id="produto-name">Depilação de Buço feminina</span><br />
+            <span id="preco">R$ 10.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados no Buço! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20de%20Buço%20feminina'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/ceravirilha.png"
+            alt="Depilação de virilha completa feminina"
+          />
+          <div>
+            <span id="produto-name">Depilação de virilha completa feminina</span
+            ><br />
+            <span id="preco">R$ 55.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na Virilha! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20de%20virilha%20completa%20feminina'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/ceravirilha.png"
+            alt="Depilação de virilha artística feminina"
+          />
+          <div>
+            <span id="produto-name"
+              >Depilação de virilha artística feminina</span
+            ><br />
+            <span id="preco">R$ 60.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na virilha! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20de%20virilha%20artística%20feminina'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/cerameiapernafeminina.png"
+            alt="Depilação de meia perna feminina"
+          />
+          <div>
+            <span id="produto-name">Depilação de meia perna feminina</span
+            ><br />
+            <span id="preco">R$ 20.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na Perna! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20de%20meia%20perna%20feminina'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/ceraperna.png"
+            alt="Depilação de perna inteira feminina"
+          />
+          <div>
+            <span id="produto-name">Depilação de perna inteira feminina</span
+            ><br />
+            <span id="preco">R$ 20.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na Perna! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20de%20perna%20inteira%20feminina'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/ceraabdome1.png" alt="Depilação feminina de abdome" />
+          <div>
+            <span id="produto-name">Depilação feminina de abdome</span><br />
+            <span id="preco">R$ 25.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na região Abdominal! Quer uma pele
+              lisinha e sem incômodos? Agende sua sessão de depilação conosco
+              agora mesmo pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20feminina%20de%20abdome'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/ceranarizfeminino1.png"
+            alt="Depilação feminina de nariz"
+          />
+          <div>
+            <span id="produto-name">Depilação feminina de nariz</span><br />
+            <span id="preco">R$ 15.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados no Nariz! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20feminina%20de%20nariz'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/cerabarba.png" alt="Depilação masculina de barba" />
+          <div>
+            <span id="produto-name">Depilação masculina de barba</span><br />
+            <span id="preco">R$ 35.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na Barba! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20masculina%20de%20barba'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/narizms.png" alt="Depilação masculina de nariz" />
+          <div>
+            <span id="produto-name">Depilação masculina de nariz</span><br />
+            <span id="preco">R$ 20.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados no Nariz! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20masculina%20de%20nariz'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/toraz.png"
+            alt="Depilação masculina de tórax e abdômen"
+          />
+          <div>
+            <span id="produto-name">Depilação masculina de tórax e abdômen</span
+            ><br />
+            <span id="preco">R$ 45.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados no Tórax e Abdômen! Quer uma pele
+              lisinha e sem incômodos? Agende sua sessão de depilação conosco
+              agora mesmo pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20masculina%20de%20tórax%20e%20abdômen'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/virilha.png"
+            alt="Depilação masculina de virilha completa"
+          />
+          <div>
+            <span id="produto-name"
+              >Depilação masculina de virilha completa</span
+            ><br />
+            <span id="preco">R$ 100.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na virilha! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20masculina%20de%20virilha%20completa'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/meiapernahomem.png"
+            alt="Depilação masculina de meia perna"
+          />
+          <div>
+            <span id="produto-name">Depilação masculina de meia perna</span
+            ><br />
+            <span id="preco">R$ 30.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na Perna! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20masculina%20de%20meia%20perna'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/completaperna.png"
+            alt="Depilação masculina de perna completa"
+          />
+          <div>
+            <span id="produto-name">Depilação masculina de perna completa</span
+            ><br />
+            <span id="preco">R$ 55.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados na Perna! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20masculina%20de%20perna%20completa'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/costas.png" alt="Depilação masculina de costas" />
+          <div>
+            <span id="produto-name">Depilação masculina de costas</span><br />
+            <span id="preco">R$ 30.00</span>
+            <p id="desc-produto">
+              Livre-se dos Pelos Indesejados nas Costas! Quer uma pele lisinha e
+              sem incômodos? Agende sua sessão de depilação conosco agora mesmo
+              pelo WhatsApp.
+            </p>
+            <br />
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20o%20procedimento%20'Depilação%20masculina%20de%20costas'.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/procedimento-microagulhamento.png"
+            alt="Microagulhamento sessão"
+          />
+          <div>
+            <span id="produto-name">Microagulhamento sessão</span><br />
+            <span id="preco">R$ 150.00</span>
+            <p id="desc-produto">
+              O microagulhamento é um procedimento estético minimamente invasivo
+              que utiliza pequenas agulhas para criar microperfurações na pele.
+              Isso estimula a produção de colágeno e a regeneração celular,
+              promovendo uma pele mais firme e uniforme.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20sess%C3%A3o%20de%20Microagulhamento.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/procedimento-limpezapele.png" alt="Limpeza de pele" />
+          <div>
+            <span id="produto-name">Limpeza de pele</span><br />
+            <span id="preco">R$ 90.00</span>
+            <p id="desc-produto">
+              A limpeza de pele é um procedimento estético que remove impurezas,
+              células mortas, cravos e excesso de oleosidade da pele. É
+              fundamental para manter a pele saudável, limpa e radiante.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20Limpeza%20de%20pele.%20Poderia%20me%20informar%20a%20disponibilidade?"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/unhaemgel2.png" alt="procedimento-unhaemgel" />
+          <div>
+            <span id="produto-name">Unha em gel</span><br />
+            <span id="preco">R$ 100.00</span>
+            <p id="desc-produto">
+              As unhas em gel são uma técnica estética que aplica camadas de gel
+              endurecido por luz UV ou LED nas unhas naturais para alongá-las e
+              fortalecê-las. Resultam em unhas duradouras, com aparência natural
+              e brilhante.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Unha%20em%20Gel.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/procedimento-massagem.png"
+            alt="procedimento-massagem"
+          />
+          <div>
+            <span id="produto-name">Massagem relaxante</span><br />
+            <span id="preco">R$ 100.00</span>
+            <p id="desc-produto">
+              A massagem relaxante é uma técnica terapêutica que utiliza
+              movimentos suaves e ritmados para aliviar a tensão muscular,
+              reduzir o estresse e promover um estado de relaxamento profundo.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Massagem%20Relaxante.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img src="./img/esfoliacao.png" alt="procedimento-esfoliacao" />
+          <div>
+            <span id="produto-name">Esfoliação corporal</span><br />
+            <span id="preco">R$ 70.00</span>
+            <p id="desc-produto">
+              A esfoliação corporal é um procedimento estético que remove as
+              células mortas da pele, promovendo renovação celular e deixando a
+              pele mais suave e brilhante.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Esfolia%C3%A7%C3%A3o%20Corporal.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/Reflexologiapodal.png"
+            alt="procedimento-reflexologia-podal"
+          />
+          <div>
+            <span id="produto-name">Reflexologia podal</span><br />
+            <span id="preco">R$ 50.00</span>
+            <p id="desc-produto">
+              A reflexologia podal é uma prática terapêutica que envolve a
+              aplicação de pressão em pontos específicos nos pés para estimular
+              diferentes partes do corpo e promover o equilíbrio e bem-estar
+              geral.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Reflexologia%20Podal.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/procedimento-modeladora.png"
+            alt="procedimento-massagem-redutora"
+          />
+          <div>
+            <span id="produto-name">Massagem redutora sessão</span><br />
+            <span id="preco">R$ 90.00</span>
+            <p id="desc-produto">
+              A massagem redutora é uma técnica estética que utiliza movimentos
+              firmes e rápidos para ajudar na redução de medidas corporais,
+              principalmente em áreas com acúmulo de gordura.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Massagem%20Redutora.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/procedimento-modeladora.png"
+            alt="procedimento-massagem-redutora"
+          />
+          <div>
+            <span id="produto-name">Pacote de massagem redutora 10 sessões</span
+            ><br />
+            <span id="preco">R$ 750.00</span>
+            <p id="desc-produto">
+              A massagem redutora é uma técnica estética que utiliza movimentos
+              firmes e rápidos para ajudar na redução de medidas corporais,
+              principalmente em áreas com acúmulo de gordura.
+            </p>
+            <br />
+            <br />
+            <br />
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%2010%20sess%C3%B5es%20de%20Massagem%20Redutora.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/correnterussa.png"
+            alt="procedimento-remocaotatuagem"
+          />
+          <div>
+            <span id="produto-name">Corrente russa sessão</span><br />
+            <span id="preco">R$ 40.00</span>
+            <p id="desc-produto">
+              A corrente russa é uma técnica estética que usa correntes
+              elétricas de baixa frequência para fortalecer e tonificar
+              músculos. Eletrodos são aplicados na pele, como abdômen, glúteos
+              ou coxas, provocando contrações musculares que melhoram a força e
+              a definição. É não invasiva e necessita de várias sessões para
+              resultados ótimos.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Corrente%20Russa.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="procedimentos-card">
+          <img
+            src="./img/correnterussa.png"
+            alt="procedimento-remocaotatuagem"
+          />
+          <div>
+            <span id="produto-name"
+              >Pacote com 10 sessões de corrente russa</span
+            ><br />
+            <span id="preco">R$ 350.00</span>
+            <p id="desc-produto">
+              A corrente russa é uma técnica estética que usa correntes
+              elétricas de baixa frequência para fortalecer e tonificar
+              músculos. Eletrodos são aplicados na pele, como abdômen, glúteos
+              ou coxas, provocando contrações musculares que melhoram a força e
+              a definição. É não invasiva e necessita de várias sessões para
+              resultados ótimos.
+            </p>
+          </div>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%2010%20sess%C3%B5es%20de%20Corrente%20Russa.%20Poderia%20me%20informar%20a%20disponibilidade%3F"
+              target="_blank"
+            >
+              <button id="whatsapp-button">Agendar via WhatsApp</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="whatsapp-fixo">
+        <!-- Link para a API do WhatsApp -->
+        <a
+          href="https://api.whatsapp.com/send?phone=5531981218580&text=Olá!%20vim%20pelo%20seu%20site!"
+          target="_blank"
+          class="js-wppWeb"
+        >
+          <img
+            src="https://cdn.awsli.com.br/294/294533/arquivos/if_whatsapp_287520.png"
+          />
+        </a>
+      </div>
+      <div class="footer-container">
+        <div class="contact-info">
+          <h2>Contato</h2>
+          <p><span>Telefone:</span> (31) 98121-8580</p>
+          <p>
+            <a
+              href="mailto:esteticaleialima@gmail.com?subject=Olá%20do%20seu%20site&body=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%21"
+              >esteticaleialima@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="address-info">
+          <h2>Endereço</h2>
+          <p>Rua José Alves, 123</p>
+          <p>Jardim Dos Comerciários</p>
+          <p>Belo Horizonte, MG</p>
+          <p>CEP 31650-095</p>
+          <a href="https://maps.app.goo.gl/xzrDvXPFiJCidU5L9" target="_blank"
+            ><img src="img/google-maps.png" alt="maps"
+          /></a>
+        </div>
+        <div class="address-info">
+          <h2>Funcionamento</h2>
+          <p>Segunda : <i> 9:00 - 18:00 </i></p>
+          <p>Terça : <i> 9:00 - 18:00 </i></p>
+          <p>Quarta : <i> 9:00 - 18:00 </i></p>
+          <p>Quinta : <i> 9:00 - 18:00 </i></p>
+          <p>Sexta : <i> 9:00 - 18:00 </i></p>
+          <p>Sábado : <i> 9:00 - 18:00 </i></p>
+          <p>Domingo : <i> Fechado </i></p>
+        </div>
+        <div class="social-media">
+          <h2>Redes Sociais</h2>
+          <a
+            href="https://www.instagram.com/clinica_estetica_leia_lima/"
+            target="_blank"
+            ><img src="./img/instagram (2).png" alt="Instagram"
+          /></a>
+          <a
+            href="https://wa.me/5531981218580?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%21"
+            target="_blank"
+            ><img src="./img/whatsapp.png" alt="WhatsApp"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          ©2023 Copyright | CLÍNICA ESTÉTICA LEIA LIMA | 44.648.746/0001-81 |
+          esteticaleialima@gmail.com
+        </p>
+      </div>
+    </footer>
+    <script src="./js/procedimentos.js"></script>
+    <script src="./js/menu-button.js"></script>
+  </body>
+</html>
