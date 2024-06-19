@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Chave secreta do reCAPTCHA v3
-    $secret_key = '6LfZUvspAAAAAOFQbtlHIh9c7KVEl67z5FFlyScz';
+    $secret_key = '6LcAH_wpAAAAAL0k0PtZWfptCbEDpHM-3P7Yg-ry';
 
     // O token reCAPTCHA enviado do formulário
     $recaptcha_response = $_POST['recaptcha_response'];
