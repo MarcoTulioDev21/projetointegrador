@@ -6,6 +6,22 @@
     <link rel="stylesheet" href="./css/login.css" />
     <script src="https://accounts.google.com/gsi/client" async></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+        function onSubmit(token) {
+            document.getElementById("contact-form").submit();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            grecaptcha.ready(function() {
+                // Este código executa o reCAPTCHA e obtém um token
+                grecaptcha.execute('6LcAH_wpAAAAAGv4O8UbRK8gXNxdULBBOuutfb4f', {action: 'submit'}).then(function(token) {
+                    // Adiciona o token ao formulário
+                    var recaptchaResponse = document.getElementById('recaptchaResponse');
+                    recaptchaResponse.value = token;
+                });
+            });
+        });
+    </script>
     <title>Login</title>
   </head>
   <body>
@@ -42,10 +58,7 @@
               <div id="buttonDiv"></div>
             </div>
             <br />
-            <div
-              class="g-recaptcha"
-              data-sitekey="6Lc4CvspAAAAAAeeW9v0iqA_44e9f6oErjrT_PIs"
-            ></div>
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
             <input type="submit" value="Login" name="login" />
           </form>
           <br />
